@@ -1,0 +1,70 @@
+# taiuto.co.uk
+
+One-page website for Taiuto Ltd, a technical consultancy with a focus on AI projects,
+founded by Andy Benedetti.
+
+Live at <https://taiuto.co.uk>.
+
+## What's in the repo
+
+| File | Purpose |
+|------|---------|
+| `index.html` | The entire site. Single file, inline CSS, no build step, no dependencies. |
+| `CNAME` | Tells GitHub Pages the custom domain. Do not delete or rename. |
+| `.nojekyll` | Stops GitHub Pages running Jekyll, so the HTML is served as-is. |
+| `dns-records.md` | Reference copy of every DNS record, including the DKIM key. |
+
+## Hosting
+
+The site is served by **GitHub Pages** from the `main` branch, root folder, in the
+repo `andybenedetti/taiuto.co.uk`. Hosting is free.
+
+Pushing to `main` deploys automatically. A deploy takes about a minute.
+
+Settings live at <https://github.com/andybenedetti/taiuto.co.uk/settings/pages>.
+The custom domain is `taiuto.co.uk`. "Enforce HTTPS" should be ticked once GitHub has
+issued the certificate.
+
+## Domain and DNS
+
+| Concern | Where | Notes |
+|---------|-------|-------|
+| Registration and renewal | Tide (resells Dreamscape / Crazy Domains) | Expires 27 June 2027. Only the name servers are set here. |
+| DNS records | Cloudflare, free plan | Name servers `beau.ns.cloudflare.com` and `ximena.ns.cloudflare.com`. All records "DNS only". |
+| Website | GitHub Pages | Four A records on the apex, `www` CNAME to `andybenedetti.github.io`. |
+| Email | Tide / Crazy Domains mail hosting | `hello@taiuto.co.uk`. MX to `mail.taiuto.co.uk`, SPF and DKIM published. |
+
+Full record list: [`dns-records.md`](dns-records.md).
+
+### Why DNS is on Cloudflare rather than Tide
+
+Tide's panel offers DNS editing, but its name servers (`ns1/ns2.crazydomains.com`) never
+published the SPF and DKIM records and kept returning the old parking address for a share
+of lookups. Moving the records to Cloudflare fixed both problems within minutes. Domain
+registration was not moved.
+
+## Editing the site
+
+1. Edit `index.html`. Open it in a browser to preview.
+2. Commit and push to `main`.
+3. Check <https://taiuto.co.uk> after a minute.
+
+Copy decisions worth keeping:
+
+- Hero: "Hands-on technical consultancy for teams that need AI done properly."
+  Sub-line explains the name: Taiuto means "I help you" in Italian (from *t'aiuto*).
+- About section heading: "Thirty years of building software. Now building it for you."
+- Written in the first person, since the company is one person.
+- Footer carries the registered company details required of a UK limited company.
+
+## Company details
+
+| | |
+|---|---|
+| Registered name | Taiuto Ltd |
+| Company number | 15801670 |
+| Registered office | 3rd Floor, 86-90 Paul Street, London EC2A 4NE |
+| Contact | hello@taiuto.co.uk |
+| LinkedIn | <https://www.linkedin.com/in/andy-benedetti/> |
+
+Source: Companies House, 4 October 2026.

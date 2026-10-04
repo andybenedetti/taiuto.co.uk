@@ -1,7 +1,13 @@
 # taiuto.co.uk DNS records
 
-Authoritative list as of 4 Oct 2026. Use this to verify or recreate the zone at any DNS host.
-At Cloudflare, set every record to "DNS only" (grey cloud), not proxied.
+DNS is hosted on Cloudflare (free plan) since 4 October 2026. The name servers are
+`beau.ns.cloudflare.com` and `ximena.ns.cloudflare.com`, set in the Tide domain panel.
+Edit records at dash.cloudflare.com, not in the Tide panel.
+
+Keep every record set to "DNS only" (grey cloud). The mail host must never be proxied, and
+GitHub Pages needs a direct view of the apex records to issue and renew its certificate.
+
+This list is the reference copy. Use it to verify the zone or recreate it at another DNS host.
 
 | Type | Name | Value | Priority | Purpose |
 |------|------|-------|----------|---------|
