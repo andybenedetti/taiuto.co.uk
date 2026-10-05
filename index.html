@@ -4,134 +4,88 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taiuto · Technical consultancy and AI builds</title>
-  <meta name="description" content="Hands-on technical consultancy for teams that need AI done properly. Taiuto means “I help you” in Italian.">
+  <meta name="description" content="Taiuto Ltd. Technical consulting, AI projects and builds, for teams that need AI done properly. London.">
+  <meta name="theme-color" content="#0e1218">
   <link rel="canonical" href="https://taiuto.co.uk/">
   <meta property="og:title" content="Taiuto · Technical consultancy and AI builds">
-  <meta property="og:description" content="Hands-on technical consultancy for teams that need AI done properly.">
+  <meta property="og:description" content="Technical consulting, AI projects and builds, for teams that need AI done properly.">
   <meta property="og:url" content="https://taiuto.co.uk/">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23fff' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
-  <style>
-    :root {
-      --bg: #fafaf8;
-      --fg: #1a1a1a;
-      --muted: #5f5f5c;
-      --rule: #e3e2dd;
-      --accent: #1f4e79;
-      --max: 44rem;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #141414;
-        --fg: #f0efea;
-        --muted: #a3a29c;
-        --rule: #2c2c2a;
-        --accent: #8fb6dc;
-      }
-    }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font: 1.0625rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover, a:focus { text-decoration: underline; text-underline-offset: 0.15em; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
-    header { padding: 2rem 0 0; }
-    .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.375rem;
-      letter-spacing: 0.01em;
-      color: var(--fg);
-    }
-    .brand:hover { text-decoration: none; }
-    .hero { padding: 5rem 0 4rem; }
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 400;
-      font-size: clamp(2rem, 5.5vw, 3.125rem);
-      line-height: 1.15;
-      letter-spacing: -0.015em;
-      margin: 0 0 1.25rem;
-    }
-    .lede { font-size: 1.25rem; color: var(--muted); margin: 0; max-width: 34em; }
-    section { padding: 3rem 0; border-top: 1px solid var(--rule); }
-    h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 400;
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-      margin: 0 0 1.25rem;
-    }
-    p { margin: 0 0 1.1em; max-width: 38em; }
-    p:last-child { margin-bottom: 0; }
-    .services {
-      list-style: none;
-      padding: 0;
-      margin: 1.5rem 0 0;
-      display: grid;
-      gap: 1.25rem 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    }
-    .services li strong { display: block; margin-bottom: 0.2rem; }
-    .services li span { color: var(--muted); }
-    .cta .contact { margin-top: 0.5rem; line-height: 1.9; }
-    .cta .mail {
-      font-size: 1.25rem;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 2rem 0 3rem;
-      font-size: 0.875rem;
-      color: var(--muted);
-    }
-    footer p { max-width: none; }
-  </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e1218'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%23f2b134' text-anchor='middle'%3Et%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&family=Work+Sans:wght@400;500&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+  /* Layout: one screen if it fits. Drafting grid, the wordmark as the whole hero, three bordered cells, a mono footer. Single dark theme by choice. */
+  :root {
+    --bg: #0e1218;
+    --panel: #131921;
+    --fg: #e5e9ef;
+    --muted: #8b95a5;
+    --rule: #242c38;
+    --grid: #161d27;
+    --accent: #f2b134;
+    --display: 'Libre Caslon Display', 'Libre Caslon Text', Georgia, serif;
+    --sans: 'Work Sans', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; color: var(--fg); font: 400 1.0625rem/1.65 var(--sans); -webkit-font-smoothing: antialiased;
+    background: var(--bg);
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 48px 48px;
+    display: flex; flex-direction: column;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:hover, a:focus-visible { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { width: 100%; max-width: 72rem; margin: 0 auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-block: clamp(3rem, 8vh, 6rem); }
+  h1 { margin: 0 0 clamp(2rem, 5vh, 3rem); font: 400 clamp(2rem, 4.5vw, 2.75rem)/1 var(--display); letter-spacing: -0.01em; }
+  h1 b { color: var(--accent); font-weight: 400; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+  .card { background: var(--panel); padding: clamp(1.25rem, 3vw, 2rem); min-width: 0; }
+  .card h2 { margin: 0 0 0.6rem; font: 400 clamp(1.375rem, 2.2vw, 1.625rem)/1.2 var(--display); }
+  .card p { margin: 0; color: var(--muted); font-size: 0.9375rem; line-height: 1.6; }
+
+  .contact { margin: clamp(2rem, 5vh, 3rem) 0 0; text-align: center; display: grid; gap: 0.35rem; }
+  .contact .label { font: 400 1.25rem/1.2 var(--display); color: var(--accent); }
+  .contact a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 0.2em; }
+  .contact a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+  footer { border-top: 1px solid var(--rule); padding-block: 1.5rem 2rem; font-family: var(--mono); font-size: 0.8125rem; line-height: 1.7; color: var(--muted); }
+  footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; }
+  footer p { margin: 0; }
+  footer a { text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 0.2em; }
+  footer a:hover { text-decoration-color: var(--accent); }
+
+  @media (max-width: 760px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
-  <header class="wrap">
-    <a class="brand" href="/">Taiuto</a>
-  </header>
 
-  <main>
-    <div class="hero wrap">
-      <h1>Hands-on technical consultancy for teams that need AI done properly.</h1>
-      <p class="lede">Taiuto means “I help you” in Italian. That is the whole idea.</p>
+<main>
+  <div class="wrap">
+    <h1>t<b>ai</b>uto</h1>
+    <div class="cards">
+      <div class="card"><h2>Technical consulting</h2><p>Architecture, due diligence, roadmaps and honest second opinions.</p></div>
+      <div class="card"><h2>AI projects</h2><p>From feasibility and prototypes to production systems that hold up. For teams that need AI done properly.</p></div>
+      <div class="card"><h2>Builds</h2><p>Web, mobile, APIs, backend services and cloud infrastructure.</p></div>
     </div>
+    <div class="contact"><span class="label">make contact</span><a href="mailto:hello@taiuto.co.uk">hello@taiuto.co.uk</a></div>
+  </div>
+</main>
 
-    <section class="wrap">
-      <h2>Thirty years of building software. Now building it for you.</h2>
-      <p>I’m Andy Benedetti. I founded Taiuto in 2024 after leaving AKQA, with more than thirty years spent designing and building software. I’ve shipped websites, mobile apps, backend services, databases, APIs and cloud platforms for clients including BMW, Rolls-Royce, Toyota, Nike, Virgin Atlantic, Foster + Partners and Barclays Global Investors.</p>
-      <p>Today I help organisations of every size, from early-stage startups to multinationals, make sound technical decisions and turn them into working products. Much of that work is now in AI: scoping what is realistic, choosing the right approach, and building it so it holds up in production.</p>
-    </section>
-
-    <section class="wrap">
-      <h2>What I do</h2>
-      <ul class="services">
-        <li><strong>Technical consulting</strong><span>Architecture, due diligence, roadmaps and honest second opinions.</span></li>
-        <li><strong>AI projects</strong><span>From feasibility and prototypes to production systems that hold up.</span></li>
-        <li><strong>Builds</strong><span>Web, mobile, APIs, backend services and cloud infrastructure.</span></li>
-      </ul>
-    </section>
-
-    <section class="wrap cta">
-      <h2>If you need a senior technical partner rather than a large agency, let’s talk.</h2>
-      <p class="contact">
-        <a class="mail" href="mailto:hello@taiuto.co.uk">hello@taiuto.co.uk</a><br>
-        <a href="https://www.linkedin.com/in/andy-benedetti/" rel="me noopener" target="_blank">Andy Benedetti on LinkedIn</a>
-      </p>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    <p>Taiuto Ltd is registered in England and Wales, company number 15801670.<br>
-    Registered office: 3rd Floor, 86-90 Paul Street, London EC2A 4NE.</p>
-  </footer>
+<footer>
+  <div class="wrap row">
+    <p>Taiuto Ltd</p>
+    <p>Registered in England and Wales, company no. 15801670<br>3rd Floor, 86-90 Paul Street, London EC2A 4NE</p>
+  </div>
+</footer>
 </body>
 </html>

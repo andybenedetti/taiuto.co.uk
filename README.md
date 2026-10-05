@@ -9,7 +9,7 @@ Live at <https://taiuto.co.uk>.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | The entire site. Single file, inline CSS, no build step, no dependencies. |
+| `index.html` | The entire site. Single file, inline CSS, no build step. Fonts from Google Fonts. |
 | `CNAME` | Tells GitHub Pages the custom domain. Do not delete or rename. |
 | `.nojekyll` | Stops GitHub Pages running Jekyll, so the HTML is served as-is. |
 | `dns-records.md` | Reference copy of every DNS record, including the DKIM key. |
@@ -49,13 +49,15 @@ registration was not moved.
 2. Commit and push to `main`.
 3. Check <https://taiuto.co.uk> after a minute.
 
-Copy decisions worth keeping:
+Design and copy notes:
 
-- Hero: "Hands-on technical consultancy for teams that need AI done properly."
-  Sub-line explains the name: Taiuto means "I help you" in Italian (from *t'aiuto*).
-- About section heading: "Thirty years of building software. Now building it for you."
-- Written in the first person, since the company is one person.
-- Footer carries the registered company details required of a UK limited company.
+- Single dark theme by choice: slate background with a faint drafting grid, Libre Caslon
+  for the wordmark and headings, Work Sans for text, JetBrains Mono for the footer.
+- The wordmark is `taiuto` with the `ai` in amber (`#f2b134`). Amber is the only accent.
+- The page is deliberately minimal: wordmark, three service items, a "make contact" line
+  with the email, and the footer with the registered company details. No navigation,
+  no biography, no client list.
+- Fonts load from Google Fonts; everything else is inline.
 
 ## Company details
 
