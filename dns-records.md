@@ -4,8 +4,13 @@ DNS is hosted on Cloudflare (free plan) since 4 October 2026. The name servers a
 `beau.ns.cloudflare.com` and `ximena.ns.cloudflare.com`, set in the Tide domain panel.
 Edit records at dash.cloudflare.com, not in the Tide panel.
 
-Keep every record set to "DNS only" (grey cloud). The mail host must never be proxied, and
-GitHub Pages needs a direct view of the apex records to issue and renew its certificate.
+Keep every record set to "DNS only" (grey cloud) except `www`, which is proxied (orange cloud).
+The mail host must never be proxied, and GitHub Pages needs a direct view of the apex records
+to issue and renew its certificate.
+
+`www` is proxied because GitHub issued its certificate for the apex only. A Cloudflare redirect
+rule named "www to apex" (Rules > Overview) sends any request for `www.taiuto.co.uk` to
+`https://taiuto.co.uk` with a 301, and Cloudflare's own certificate covers `www`.
 
 This list is the reference copy. Use it to verify the zone or recreate it at another DNS host.
 
@@ -15,7 +20,7 @@ This list is the reference copy. Use it to verify the zone or recreate it at ano
 | A | @ | 185.199.109.153 | | GitHub Pages |
 | A | @ | 185.199.110.153 | | GitHub Pages |
 | A | @ | 185.199.111.153 | | GitHub Pages |
-| CNAME | www | andybenedetti.github.io | | GitHub Pages |
+| CNAME | www | andybenedetti.github.io | | Proxied via Cloudflare, redirected to apex |
 | A | mail | 203.28.49.145 | | Mail host (Tide / Crazy Domains) |
 | MX | @ | mail.taiuto.co.uk | 1 | Incoming mail |
 | TXT | @ | v=spf1 +mx +a +ip4:122.201.124.79 ~all | | SPF |

@@ -22,8 +22,8 @@ repo `andybenedetti/taiuto.co.uk`. Hosting is free.
 Pushing to `main` deploys automatically. A deploy takes about a minute.
 
 Settings live at <https://github.com/andybenedetti/taiuto.co.uk/settings/pages>.
-The custom domain is `taiuto.co.uk`. "Enforce HTTPS" should be ticked once GitHub has
-issued the certificate.
+The custom domain is `taiuto.co.uk` and "Enforce HTTPS" is on. GitHub's certificate covers
+the apex only; `www` is handled by Cloudflare (see below).
 
 ## Domain and DNS
 
@@ -31,7 +31,7 @@ issued the certificate.
 |---------|-------|-------|
 | Registration and renewal | Tide (resells Dreamscape / Crazy Domains) | Expires 27 June 2027. Only the name servers are set here. |
 | DNS records | Cloudflare, free plan | Name servers `beau.ns.cloudflare.com` and `ximena.ns.cloudflare.com`. All records "DNS only". |
-| Website | GitHub Pages | Four A records on the apex, `www` CNAME to `andybenedetti.github.io`. |
+| Website | GitHub Pages | Four A records on the apex, DNS only. `www` is a CNAME to `andybenedetti.github.io` but **proxied** through Cloudflare, with a Cloudflare redirect rule sending it to `https://taiuto.co.uk`. |
 | Email | Tide / Crazy Domains mail hosting | `hello@taiuto.co.uk`. MX to `mail.taiuto.co.uk`, SPF and DKIM published. |
 
 Full record list: [`dns-records.md`](dns-records.md).
