@@ -70,3 +70,15 @@ Design and copy notes:
 | LinkedIn | <https://www.linkedin.com/in/andy-benedetti/> |
 
 Source: Companies House, 4 October 2026.
+
+## TODO
+
+- **Move `www` back to GitHub.** The `www` host is currently proxied through Cloudflare with a
+  redirect rule because GitHub issued its certificate for the apex only. Once the site no longer
+  needs to be guaranteed stable (there is an external verification of the domain in progress),
+  undo this: delete the "www to apex" redirect rule in Cloudflare, switch the `www` record back
+  to DNS only, then remove and re-add the custom domain in GitHub Pages settings so it issues a
+  fresh certificate covering both names. Expect up to an hour where `https://taiuto.co.uk` shows
+  a certificate warning while GitHub re-issues. Verify with
+  `openssl s_client -servername taiuto.co.uk -connect taiuto.co.uk:443 | openssl x509 -noout -ext subjectAltName`
+  and check both names are listed.
